@@ -19,7 +19,7 @@
                     placeholder="Generic Name or Brand Name...">
             </div>
 
-            <div wire:loading.class.dealy.longest='op'>
+            <div wire:loading.class.dealy='op'>
                 @forelse ($drugs as $drug)
                     <div class="card my-3">
                         <header class="card-header">
