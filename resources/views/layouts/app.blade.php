@@ -37,6 +37,12 @@
     {{-- google fonts icons --}}
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 
+    <style>
+        .op {
+            opacity: 0.25;
+        }
+    </style>
+
     @livewireStyles
 </head>
 
