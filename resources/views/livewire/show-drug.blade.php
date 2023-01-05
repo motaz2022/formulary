@@ -46,7 +46,7 @@
                       <span class="icon-text">
                           <span style="color: red" class="material-symbols-outlined">blur_circular</span>
                           <span><strong>&nbspSide Effects</strong></span>
-                          <span><p align="justify">&nbsp{{ $drug->se }}</p></span>
+                          <span><p>&nbsp{{ $drug->se }}</p></span>
                       </span>
                   </div>
 
