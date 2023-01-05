@@ -8,7 +8,7 @@
                             history
                         </span>
                     </span>
-                    <strong>Updated {{ $drug->updated_at }}</strong>
+                    <strong>Updated {{ $drug->updated_at->format('M d, Y') }}</strong>
                 </p>
             </div>
 
