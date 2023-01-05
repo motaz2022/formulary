@@ -13,5 +13,7 @@ class Drug extends Model
         'availability' => 'boolean',
     ];
 
+    protected $dates = ['updated_at'];
+
     protected $fillable = ['group', 'subgroup', 'scientificname', 'tradename', 'price', 'se', 'availability', 'note', 'is_published'];
 }
