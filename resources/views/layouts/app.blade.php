@@ -47,21 +47,9 @@
 </head>
 
 <body>
-    {{-- <section class="section">
-        <div class="container">
-            <h1 class="title">
-                ERMC Formulary
-            </h1>
-            <p class="subtitle">
-                New Version Comming Soon <strong>2023</strong>
-            </p>
-
-            <div>
-                <input class="input is-primary is-center" type="text" placeholder="Primary input">
-            </div>
-        </div>
-    </section> --}}
-
+    <div class="has-text-centered mt-5">
+        <img width="600" height="120" src="{{ asset('svg/formulary.svg') }}" alt="">
+     </div>
     @yield('content')
 
     
