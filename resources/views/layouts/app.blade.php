@@ -47,9 +47,9 @@
 </head>
 
 <body>
-    <div class="has-text-centered mt-5">
+    <a href="/"><div class="has-text-centered mt-5">
         <img width="600" height="120" src="{{ asset('svg/formulary.svg') }}" alt="">
-     </div>
+     </div></a>
     @yield('content')
 
     
