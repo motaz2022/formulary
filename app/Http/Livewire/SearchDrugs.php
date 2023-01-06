@@ -27,9 +27,9 @@ class SearchDrugs extends Component
     public function render()
     {
         return view('livewire.search-drugs', [
-            'drugs' => Drug::where('scientificname', 'like', '%'.$this->search.'%')
-            ->orWhere('tradename', 'like', '%'.$this->search.'%')
-            ->orWhere('group', 'like', '%'.$this->search.'%')
+            'drugs' => Drug::where('genericName', 'like', '%'.$this->search.'%')
+            ->orWhere('brandName', 'like', '%'.$this->search.'%')
+            // ->orWhere('group', 'like', '%'.$this->search.'%')
             ->orderBy('id')
             ->Simplepaginate(5),
         ]);

@@ -16,13 +16,18 @@ return new class extends Migration
         Schema::create('drugs', function (Blueprint $table) {
             $table->id();
             $table->text('group')->nullable();
-            $table->text('subgroup')->nullable();
-            $table->text('scientificname')->nullable();
-            $table->text('tradename')->nullable();
+            $table->text('subGroup')->nullable();
+            $table->text('genericName')->nullable();
+            $table->text('brandName')->nullable();
+            $table->text('dosageForm')->nullable();
             $table->text('price')->nullable();
-            $table->text('se')->nullable();
+            $table->text('sideEffects')->nullable();
             $table->text('note')->nullable();
             $table->text('cautions')->nullable();
+            $table->text('pregnancy')->nullable();
+            $table->text('breastfeeding')->nullable();
+            $table->text('storage')->nullable();
+            $table->text('reference')->nullable();
             $table->boolean('availability')->default(false);
             $table->timestamps();
         });

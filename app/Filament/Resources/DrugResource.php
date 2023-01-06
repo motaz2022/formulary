@@ -24,6 +24,8 @@ use Filament\Tables\Filters\Filter;
 use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Filters\TernaryFilter;
 use Filament\Forms\Components\MarkdownEditor;
+use Filament\Widgets\Widget;
+use Filament\Forms\Components\Select;
 
 class DrugResource extends Resource
 {
@@ -37,15 +39,34 @@ class DrugResource extends Resource
             ->schema([
                 Card::make()
                     ->schema([
-                        TextInput::make('group')->label('Group'),
-                        TextInput::make('subgroup')->label('Subgroup'),
-                        TextInput::make('scientificname')->label('Scientific Name'),
-                        TextInput::make('tradename')->label('Trade Name'),
-                        TextInput::make('price')->label('Price')->numeric(),
-                        RichEditor::make('se')->label('Side Effects'),
-                        Textarea::make('note')->label('Note'),
-                        Textarea::make('cautions')->label('Cautions'),
-                        // RichEditor::make('note')->label('Note'),
+                        TextInput::make('group')->label('Group')->required(),
+                        TextInput::make('subGroup')->label('Subgroup')->required(),
+                        TextInput::make('genericName')->label('Generic Name')->required(),
+                        TextInput::make('brandName')->label('Brand Name')->required(),
+                        Select::make('dosageForm')
+                            ->options([
+                                'tablet' => 'Tablet',
+                                'capsule' => 'Capsule',
+                                'ampoule' => 'Ampoule',
+                                'vial' => 'Vial',
+                                'ointment' => 'Ointment',
+                                'cream' => 'Cream',
+                                'suppository ' => 'Suppository ',
+                                'enema' => 'Enema',
+                                'syrup' => 'Syrup',
+                                'inhalers' => 'Inhalers',
+                                'nebulizer' => 'Nebulizer',
+                                'eye drops' => 'Eye Drops',
+                                'ear drops' => 'Ear Drops',
+                            ])->required(),
+                        TextInput::make('price')->label('Price')->numeric()->required(),
+                        RichEditor::make('sideEffects')->label('Side Effects'),
+                        // Textarea::make('note')->label('Note'),
+                        // Textarea::make('cautions')->label('Cautions'),
+                        RichEditor::make('pregnancy')->label('Pregnancy'),
+                        RichEditor::make('breastfeeding')->label('Breastfeeding'),
+                        Textarea::make('storage')->label('Storage'),
+                        TextInput::make('reference')->label('Reference'),
                         Toggle::make('availability')->label('Availability')
                     ])
             ]);
@@ -56,8 +77,8 @@ class DrugResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('id'),
-                TextColumn::make('scientificname')->label('Scientific Name')->sortable()->searchable(),
-                TextColumn::make('tradename')->label('Trade Name')->sortable()->searchable(),
+                TextColumn::make('genericName')->label('Generic Name')->sortable()->searchable(),
+                TextColumn::make('brandName')->label('Brand Name')->sortable()->searchable(),
                 TextColumn::make('price')->label('Price'),
                 IconColumn::make('availability')->label('Availability')->boolean()
                     ->trueIcon('heroicon-o-badge-check')
@@ -80,6 +101,8 @@ class DrugResource extends Resource
             //
         ];
     }
+
+
 
     public static function getPages(): array
     {

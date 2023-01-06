@@ -15,5 +15,5 @@ class Drug extends Model
 
     
 
-    protected $fillable = ['group', 'subgroup', 'scientificname', 'tradename', 'price', 'se', 'availability', 'note', 'is_published'];
+    protected $fillable = ['group', 'subGroup', 'genericName', 'brandName', 'dosageForm', 'price', 'sideEffects', 'availability', 'note', 'cautions', 'pregnancy', 'breastfeeding', 'storage', 'reference', 'is_published'];
 }

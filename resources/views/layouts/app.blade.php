@@ -48,17 +48,17 @@
 
 <body>
 
-        <div class="container is-max-desktop px-5">
+    <div class="container is-max-desktop px-5">
 
-            <a href="/">
-                <div class="has-text-centered mt-5">
-                    <img width="600" height="120" src="{{ asset('svg/formulary.svg') }}" alt="">
-                </div>
-            </a>
-            
-            @yield('content')
-        </div>
-    
+        <a href="/">
+            <div class="has-text-centered mt-5">
+                <img width="600" height="120" src="{{ asset('svg/formulary.svg') }}" alt="">
+            </div>
+        </a>
+
+        @yield('content')
+    </div>
+
 
 
     <footer class="footer">
@@ -71,6 +71,16 @@
             <strong>© ERMC | Clinical Pharmacy Department 2023</strong>
         </div>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let cardToggles = document.getElementsByClassName('card-toggle');
+            for (let i = 0; i < cardToggles.length; i++) {
+                cardToggles[i].addEventListener('click', e => {
+                    e.currentTarget.parentElement.parentElement.childNodes[3].classList.toggle('is-hidden');
+                });
+            }
+        });
+    </script>
 
     @livewireScripts
 </body>

@@ -2,12 +2,12 @@
     <h1 class="mb-2 has-text-centered">Search the ERMC Drug
         Formulary,
         effective from
-        <strong>March 1, 2022</strong>
+        <strong>DEC, 2022</strong>
         using generic or brand name.
     </h1>
 
         <div>
-            <input wire:model.debounce.300ms="search" class="input is-primary is-rounded is-6" type="text"
+            <input wire:model.debounce.300ms="search" class="input is-info is-rounded is-6" type="text"
                 placeholder="Generic Name or Brand Name...">
         </div>
 
@@ -17,7 +17,7 @@
                 @if ($drug->availability == 1)
                     <div class="card my-3">
                         <header class="card-header">
-                            <p class="card-header-title">{{ $drug->tradename }}</p>
+                            <p class="card-header-title">{{ $drug->brandName }}</p>
 
                             <div class="has-text-right m-2">
                                 <a href="/drug/{{ $drug->id }}"><button
@@ -38,7 +38,7 @@
                                                     prescriptions
                                                 </span>
                                                 <span>
-                                                    <strong>&nbsp{{ $drug->scientificname }}</strong>
+                                                    <strong>&nbsp{{ $drug->genericName }}</strong>
                                                 </span>
                                             </span>
                                         </div>
@@ -49,7 +49,7 @@
                                                     dns
                                                 </span>
                                                 <span>
-                                                    <strong>&nbsp{{ $drug->subgroup }}</strong>
+                                                    <strong>&nbsp{{ $drug->subGroup }}</strong>
                                                 </span>
                                             </span>
                                         </div>
