@@ -1,12 +1,12 @@
 <div>
     <div class="has-text-right mb-2">
-        <p><span class="icon-text">
+        <small><span class="icon-text">
                 <span style="color: orange" class="material-symbols-outlined">
                     history
                 </span>
             </span>
             Updated {{ $drug->updated_at->format('M d, Y') }}
-        </p>
+        </small>
     </div>
 
     <div class="card">
