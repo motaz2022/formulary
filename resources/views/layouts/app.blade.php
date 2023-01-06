@@ -47,21 +47,30 @@
 </head>
 
 <body>
-    <a href="/"><div class="has-text-centered mt-5">
-        <img width="600" height="120" src="{{ asset('svg/formulary.svg') }}" alt="">
-     </div></a>
-    @yield('content')
 
+        <div class="container is-max-desktop px-5">
+
+            <a href="/">
+                <div class="has-text-centered mt-5">
+                    <img width="600" height="120" src="{{ asset('svg/formulary.svg') }}" alt="">
+                </div>
+            </a>
+            
+            @yield('content')
+        </div>
     
+
+
     <footer class="footer">
         <div class="content has-text-centered">
-          <p>
-            <strong>ERMC Formulary</strong> 
-            Designed & Developed by the <a href="https://ermcpharma.com/">Department of Clinical Pharmacy, Railway Hospital</a>
-          </p>
-          <strong>© ERMC | Clinical Pharmacy Department 2023</strong>
+            <p>
+                <strong>ERMC Formulary</strong>
+                Designed & Developed by the <a href="https://ermcpharma.com/">Department of Clinical Pharmacy, Railway
+                    Hospital</a>
+            </p>
+            <strong>© ERMC | Clinical Pharmacy Department 2023</strong>
         </div>
-      </footer>
+    </footer>
 
     @livewireScripts
 </body>

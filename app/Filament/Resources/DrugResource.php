@@ -23,6 +23,7 @@ use Filament\Forms\Components\Textarea;
 use Filament\Tables\Filters\Filter;
 use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Filters\TernaryFilter;
+use Filament\Forms\Components\MarkdownEditor;
 
 class DrugResource extends Resource
 {
