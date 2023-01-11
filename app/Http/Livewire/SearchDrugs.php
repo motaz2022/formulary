@@ -5,6 +5,7 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use App\Models\Drug;
 use Livewire\WithPagination;
+use Illuminate\Support\Facades\DB;
 
 class SearchDrugs extends Component
 {
@@ -26,12 +27,11 @@ class SearchDrugs extends Component
 
     public function render()
     {
-        return view('livewire.search-drugs', [
-            'drugs' => Drug::where('genericName', 'like', '%'.$this->search.'%')
-            ->orWhere('brandName', 'like', '%'.$this->search.'%')
-            // ->orWhere('group', 'like', '%'.$this->search.'%')
-            ->orderBy('id')
-            ->Simplepaginate(5),
-        ]);
+        $drugs = Drug::where(function ($query) {
+            $query->where('genericName', 'like', '%'.$this->search.'%')
+                ->orWhere('brandName', 'like', '%'.$this->search.'%');
+        })->where('availability', 1)
+        ->simplepaginate(5);
+        return view('livewire.search-drugs', compact('drugs'));
     }
 }

@@ -1,223 +1,216 @@
 <div>
-    @if ($drug->updated_at == '')
-        <p class="has-text-right" style="color:red">Date Needed ??</p>
-    @else
-        <div class="has-text-right mb-2">
-            <small><span class="icon-text">
-                    <span style="color: orange" class="material-symbols-outlined">
-                        history
-                    </span>
-                </span>
-                Updated {{ $drug->updated_at->format('M d, Y') }}
-            </small>
-        </div>
-    @endif
-
-
-    <div class="card">
-
-        <header class="card-header">
-            <p class="card-header-title">{{ $drug->brandName }}</p>
-        </header>
-
-        <div class="card-content">
-
+    <div class="text-end text-sm">
+        @if ($drug->updated_at == '')
+            <p style="color:red">Date Needed ??</p>
+        @else
             <div>
-                <span class="icon-text">
-                    <span style="color: blue" class="material-symbols-outlined">
-                        prescriptions
-                    </span>
-                    <span>
-                        <strong>&nbsp{{ $drug->genericName }}</strong>
-                    </span>
-                </span>
+                <span class="material-symbols-outlined relative top-1.5 left-0 text-blue-500"> history </span>
+                Updated {{ $drug->updated_at->format('M d, Y') }}
             </div>
-
-            <div class="my-2">
-                <span class="icon-text">
-                    <span style="color: green" class="material-symbols-outlined">
-                        payments
-                    </span>
-                    <span>
-                        <strong>&nbsp{{ $drug->price }} EGP</strong>
-                    </span>
-                </span>
-            </div>
-
-            {{-- <div class="my-2">
-                <span class="icon-text">
-                    <span style="color: red" class="material-symbols-outlined">blur_circular</span>
-                    <span><strong>&nbspSide Effects</strong></span>
-                    <div><span><p>{!! $drug->se !!}</p></span></div>
-                </span>
-            </div> --}}
-
-
-
-
-        </div>
-
-
+        @endif
     </div>
 
 
-    {{-- Side Effects --}}
-    @if ($drug->sideEffects == '')
-    @else
-        <div class="card">
-            <header class="card-header">
-                <p class="card-header-title">
-                    <span class="icon-text">
-                        <span style="color: red" class="material-symbols-outlined">blur_circular</span>
-                        <span><strong>&nbspSide Effects</strong></span>
-                    </span>
-                </p>
-                <button
-                    class="m-2 card-toggle button is-small is-warning is-light is-rounded border is-outlined">Show</button>
-                </button>
-            </header>
-            <div class="card-content is-hidden">
-                {!! $drug->sideEffects !!}
-            </div>
-        </div>
-    @endif
-
-    {{-- Pregnancy     --}}
-    @if ($drug->pregnancy == '')
-    @else
-        <div class="card">
-            <header class="card-header">
-                <p class="card-header-title">
-                    <span class="icon-text">
-                        <span style="color: purple" class="material-symbols-outlined">pregnant_woman</span>
-                        <span><strong>&nbspPregnancy</strong></span>
-                    </span>
-                </p>
-                <button
-                    class="m-2 card-toggle button is-small is-warning is-light is-rounded border is-outlined">Show</button>
-                </button>
-            </header>
-            <div class="card-content is-hidden">
-                {!! $drug->pregnancy !!}
-            </div>
-        </div>
-    @endif
-
-    {{-- Breastfeeding --}}
-    @if ($drug->breastfeeding == '')
-    @else
-        <div class="card">
-            <header class="card-header">
-                <p class="card-header-title">
-                    <span class="icon-text">
-                        <span style="color: #45b6fe" class="material-symbols-outlined">breastfeeding</span>
-                        <span><strong>&nbspBreastfeeding</strong></span>
-                    </span>
-                </p>
-                {{-- <button class="card-header-icon card-toggle" aria-label="more options"> --}}
-                <button
-                    class="m-2 card-toggle button is-small is-warning is-light is-rounded border is-outlined">Show</button>
-                </button>
-            </header>
-            <div class="card-content is-hidden">
-                {!! $drug->breastfeeding !!}
-            </div>
-        </div>
-    @endif
+    <div
+        class=" columns-auto mt-2 block p-6 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+        <h5 class="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white">{{ $drug->brandName }}</h5>
+        <p class="font-normal text-gray-700 dark:text-gray-400"><span
+                class="material-symbols-outlined relative top-1.5 left-0 text-sky-500 mr-2">prescriptions</span>Generic Name: {{ $drug->genericName }}
+        </p>
+        <p class="font-normal text-gray-700 dark:text-gray-400"><span
+                class="material-symbols-outlined relative top-1.5 left-0 text-green-500 mr-2">payments</span>Price: {{ $drug->price }}
+            EGP</p>
+        <p class="font-normal text-gray-700 dark:text-gray-400"><span
+                class="material-symbols-outlined relative top-1.5 left-0 text-yellow-500 mr-2">dns</span>Class: {{ $drug->subGroup }}
+        </p>
+    </div>
 
 
-    {{-- Storage Conditions --}}
-    @if ($drug->storage == '')
-    @else
-        <div class="card">
-            <header class="card-header">
-                <p class="card-header-title">
-                    <span class="icon-text">
-                        <span style="color: #E25822" class="material-symbols-outlined">ac_unit</span>
-                        <span><strong>&nbspStorage Conditions</strong></span>
-                    </span>
-                </p>
-                <button
-                    class="m-2 card-toggle button is-small is-warning is-light is-rounded border is-outlined">Show</button>
-                </button>
-            </header>
-            <div class="card-content is-hidden">
-                {!! $drug->storage !!}
-            </div>
-        </div>
-    @endif
+    <div class=" mt-4">
 
-    @if ($drug->reference == '')
-        <div class="card">
-            <header class="card-header">
-                <p class="card-header-title">
-                    <span class="icon-text">
-                        <span style="color: orange" class="material-symbols-outlined">description</span>
-                        <span><strong>&nbspReference</strong></span>
-                    </span>
-                </p>
-                <button
-                    class="m-2 card-toggle button is-small is-warning is-light is-rounded border is-outlined">Show</button>
+        <div id="accordion-color" data-accordion="collapse"
+            data-active-classes="bg-blue-100 dark:bg-gray-800 dark:text-white">
+
+             {{-- Check Side effects --}}
+
+            @if ($drug->sideEffects == '')
+            @else
+
+            {{-- accordion 1 Side effects --}}
+            <h2 id="accordion-color-heading-1">
+                <button type="button"
+                    class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800"
+                    data-accordion-target="#accordion-color-body-1" aria-expanded="false"
+                    aria-controls="accordion-color-body-1">
+                    <span><span
+                            class="material-symbols-outlined relative top-1.5 left-0 text-red-500 mr-2">blur_circular</span>Side
+                        Effects</span>
+                    <svg data-accordion-icon class="w-6 h-6 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
                 </button>
-            </header>
-            <div class="card-content is-hidden">
-                Drug leaflet
-            </div>
-        @else
-            <div class="card">
-                <header class="card-header">
-                    <p class="card-header-title">
-                        <span class="icon-text">
-                            <span style="color: orange" class="material-symbols-outlined">description</span>
-                            <span><strong>&nbspReference</strong></span>
-                        </span>
-                    </p>
-                    <button
-                        class="m-2 card-toggle button is-small is-warning is-light is-rounded border is-outlined">Show</button>
-                    </button>
-                </header>
-                <div class="card-content is-hidden">
-                    {!! $drug->reference !!}
+            </h2>
+            <div id="accordion-color-body-1" class="hidden" aria-labelledby="accordion-color-heading-1">
+                <div class="p-5 font-sans border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+                    <p class="mb-2 text-gray-500 dark:text-gray-400">{!! $drug->sideEffects !!}</p>
+
                 </div>
             </div>
-    @endif
+            {{-- End accordion 1 Side effects --}}
+            @endif
+
+
+            {{-- Check Pregnancy --}}
+            @if ($drug->pregnancy == '')
+            @else
+                {{-- accordion 2 Pregnancy --}}
+                <h2 id="accordion-color-heading-2">
+                    <button type="button"
+                        class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800"
+                        data-accordion-target="#accordion-color-body-2" aria-expanded="false"
+                        aria-controls="accordion-color-body-2">
+                        <span><span
+                                class="material-symbols-outlined relative top-1.5 left-0 text-rose-500 mr-2">pregnant_woman</span>Pregnancy</span></span>
+                        <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </h2>
+                <div id="accordion-color-body-2" class="hidden" aria-labelledby="accordion-color-heading-2">
+                    <div class="p-5 font-sans border border-b-0 border-gray-200 dark:border-gray-700">
+                        <p class="mb-2 text-gray-500 dark:text-gray-400">{!! $drug->pregnancy !!}</p>
+
+                    </div>
+                </div>
+                {{-- end accordion 2 Pregnancy --}}
+            @endif
 
 
 
 
 
 
-    {{-- Icons Names Section --}}
+            {{-- Check Breastfeeding --}}
+            @if ($drug->breastfeeding == '')
+            @else
+                {{--  accordion 3 Breastfeeding --}}
+                <h2 id="accordion-color-heading-3">
+                    <button type="button"
+                        class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800"
+                        data-accordion-target="#accordion-color-body-3" aria-expanded="false"
+                        aria-controls="accordion-color-body-3">
+                        <span><span
+                                class="material-symbols-outlined relative top-1.5 left-0 text-teal-500 mr-2">breastfeeding</span>Breastfeeding</span></span>
+                        <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </h2>
+                <div id="accordion-color-body-3" class="hidden" aria-labelledby="accordion-color-heading-3">
+                    <div class="p-5 font-sans border border-b-0 border-gray-200 dark:border-gray-700">
+                        <p class="mb-2 text-gray-500 dark:text-gray-400">{!! $drug->breastfeeding !!}</p>
 
-    <div class="mt-5 box is-rounded border">
-        <span class="icon-text">
-            <span style="color: blue" class="material-symbols-outlined">
-                prescriptions
-            </span>
-            <span>
-                <strong>&nbspScientific Name</strong>
-            </span>
-        </span>
+                    </div>
+                </div>
+            @endif
+            {{-- end accordion 3 Breastfeeding  --}}
 
-        <span class="icon-text">
-            <span style="color: green" class="material-symbols-outlined">
-                payments
-            </span>
-            <span>
-                <strong>&nbspPrice</strong>
-            </span>
-        </span>
+            {{-- Check Storage Conditions --}}
+            @if ($drug->storage == '')
+            @else
+                {{--  accordion 4 Storage Condition --}}
+                <h2 id="accordion-color-heading-4">
+                    <button type="button"
+                        class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800"
+                        data-accordion-target="#accordion-color-body-4" aria-expanded="false"
+                        aria-controls="accordion-color-body-4">
+                        <span><span
+                                class="material-symbols-outlined relative top-1.5 left-0 text-sky-500 mr-2">ac_unit</span>Storage
+                            Conditions</span></span>
+                        <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </h2>
+                <div id="accordion-color-body-4" class="hidden" aria-labelledby="accordion-color-heading-4">
+                    <div class="p-5 font-sans border border-b-0 border-gray-200 dark:border-gray-700">
+                        <p class="mb-2 text-gray-500 dark:text-gray-400">{!! $drug->storage !!}</p>
 
-        <span class="icon-text">
-            <span style="color: red" class="material-symbols-outlined">
-                dns
-            </span>
-            <span>
-                <strong>&nbspDrug Group</strong>
-            </span>
-        </span>
+                    </div>
+                </div>
+
+                {{-- end accordion 4 Storage Condition --}}
+            @endif
+
+            {{-- also this type accordion should be the last one if you want add another add from code above --}}
+            {{-- Check Storage Conditions  --}}
+            @if ($drug->reference == '')
+                {{--  accordion 5 reference Condition --}}
+                <h2 id="accordion-color-heading-5">
+                    <button type="button"
+                        class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800"
+                        data-accordion-target="#accordion-color-body-5" aria-expanded="false"
+                        aria-controls="accordion-color-body-5">
+                        <span><span
+                                class="material-symbols-outlined relative top-1.5 left-0 text-gray-500 mr-2">description</span>Reference</span>
+                        <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </h2>
+                <div id="accordion-color-body-5" class="hidden" aria-labelledby="accordion-color-heading-5">
+                    <div class="p-5 font-sans border border-t-0 border-gray-200 dark:border-gray-700">
+                        <p class="mb-2 text-gray-500 dark:text-gray-400">Drug leaflet</p>
+                    </div>
+                </div>
+
+                {{-- end accordion 5 reference Condition --}}
+            @else
+                {{--  accordion 5 reference Condition --}}
+                <h2 id="accordion-color-heading-5">
+                    <button type="button"
+                        class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800"
+                        data-accordion-target="#accordion-color-body-5" aria-expanded="false"
+                        aria-controls="accordion-color-body-5">
+                        <span><span
+                                class="material-symbols-outlined relative top-1.5 left-0 text-gray-500 mr-2">description</span>Reference</span>
+                        <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </h2>
+                <div id="accordion-color-body-5" class="hidden" aria-labelledby="accordion-color-heading-5">
+                    <div class="p-5 font-sans border border-t-0 border-gray-200 dark:border-gray-700">
+                        <p class="mb-2 text-gray-500 dark:text-gray-400">{!! $drug->reference !!}</p>
+                    </div>
+                </div>
+
+                {{-- end accordion 5 reference Condition --}}
+            @endif
+
+
+
+        </div>
 
     </div>
-    <div class="mb-5"></div>
+
 
 </div>

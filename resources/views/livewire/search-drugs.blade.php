@@ -1,144 +1,92 @@
 <div>
-    <h1 class="mb-2 has-text-centered">Search the ERMC Drug
-        Formulary,
-        effective from
-        <strong>DEC, 2022</strong>
-        using generic or brand name.
-    </h1>
-
-        <div>
-            <input wire:model.debounce.300ms="search" class="input is-info is-rounded is-6" type="text"
-                placeholder="Generic Name or Brand Name...">
+    <div class=" text-center">
+        <h1 class="mb-2 text-md">Search the ERMC Drug
+            Formulary,
+            effective from
+            <strong>DEC, 2022</strong>
+            using generic or brand name.
+        </h1>
+    </div>
+    <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+    <div class="relative">
+        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+            <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
         </div>
+        <input wire:model.debounce.300ms="search" type="search" id="default-search"
+            class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            placeholder="Search Generic, Brand..." required>
 
-        <div wire:loading.class.dealy='op'>
-            @forelse ($drugs as $drug)
-                {{-- Check Availability --}}
-                @if ($drug->availability == 1)
-                    <div class="card my-3">
-                        <header class="card-header">
-                            <p class="card-header-title">{{ $drug->brandName }}</p>
+    </div>
+    <div wire:loading.class.long="opacity-50">
 
-                            <div class="has-text-right m-2">
-                                <a href="/drug/{{ $drug->id }}"><button
-                                        class="card-header-icon button is-info is-light is-rounded is-normal is-responsive">More
-                                        Info</button></a>
-                            </div>
-                        </header>
+        @forelse ($drugs as $drug)
+           
+                <div
+                    class="max-w-4xl p-6 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 mt-2">
+                    <a href="#">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                            {{ $drug->brandName }}</h5>
+                    </a>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{ $drug->genericName }}</p>
 
-                        <div class="card-content">
-                            <div class="content">
-                                <div class="columns is-mobile">
+                    <div class=" columns-2">
 
-                                    <div class="column is-6">
+                        <div class=" inline-flex">
+                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
 
-                                        <div>
-                                            <span class="icon-text">
-                                                <span style="color: blue" class="material-symbols-outlined">
-                                                    prescriptions
-                                                </span>
-                                                <span>
-                                                    <strong>&nbsp{{ $drug->genericName }}</strong>
-                                                </span>
-                                            </span>
-                                        </div>
 
-                                        <div class="mt-2">
-                                            <span class="icon-text">
-                                                <span style="color: red" class="material-symbols-outlined">
-                                                    dns
-                                                </span>
-                                                <span>
-                                                    <strong>&nbsp{{ $drug->subGroup }}</strong>
-                                                </span>
-                                            </span>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="column is-6">
-
-                                        <span class="icon-text">
-                                            <span style="color: green" class="material-symbols-outlined">
-                                                payments
-                                            </span>
-                                            <span>
-                                                <strong>&nbsp{{ $drug->price }} EGP</strong>
-                                            </span>
-                                        </span>
-
-                                        {{-- <div class="mt-2">
-                                    <span class="icon-text">
-                                        <span style="color: orange" class="material-symbols-outlined">
-                                            history
-                                        </span>
-                                        <span>
-                                            <strong>&nbsp{{ $drug->updated_at->format('d/m/Y') }}</strong>
-                                        </span>
-                                    </span>
-                                </div> --}}
-
-                                    </div>
+                                <span
+                                    class="material-symbols-outlined relative top-1.5 left-0 text-green-600">payments</span>
+                                {{ $drug->price }} EGP
 
 
 
-                                </div>
-                            </div>
+
+                            </p>
+                        </div>
+
+                        <div class="text-end">
+                            <a href="/drug/{{ $drug->id }}"
+                                class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                More Info
+
+                            </a>
                         </div>
                     </div>
-                @endif
 
-            @empty
-                <div class="has-text-centered">
-                    <div class="box my-3 p-6">
-                        <span class="icon-text">
-                            <span class="icon">
-                                <i class="fa-solid fa-magnifying-glass fa-lg" style="color: hsl(348, 100%, 61%)"></i>
-                            </span>
-                            <strong class="has-text-danger is-size-5">No search results found</strong>
-                        </span>
-                        {{-- <strong class="has-text-danger is-size-4">No search results found</strong> --}}
-                    </div>
                 </div>
-            @endforelse
+           
 
-            <div class="has-text-centered">
-                {{ $drugs->links('pagination-links') }}
+
+
+        @empty
+            <div
+                class="max-w-4xl p-6 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 mt-2">
+
+                <p class="p-6 font-normal text-red-600 dark:text-gray-400  m-auto text-2xl text-center font-sans"><span
+                        style="font-size: 36px"
+                        class="material-symbols-outlined relative top-2.5 left-0 text-red-600 mr-2">search</span>No
+                    Search Results Found</p>
+
+
             </div>
-        </div>
+        @endforelse
+
+
+    </div>
 
 
 
-        <div class="mt-5 box is-rounded border">
-            <span class="icon-text">
-                <span style="color: blue" class="material-symbols-outlined">
-                    prescriptions
-                </span>
-                <span>
-                    <strong>&nbspScientific Name</strong>
-                </span>
-            </span>
 
-            <span class="icon-text">
-                <span style="color: green" class="material-symbols-outlined">
-                    payments
-                </span>
-                <span>
-                    <strong>&nbspPrice</strong>
-                </span>
-            </span>
+    {{-- pagination --}}
+    <div class="mt-2">
+        {{ $drugs->links() }}
+    </div>
 
-            <span class="icon-text">
-                <span style="color: red" class="material-symbols-outlined">
-                    dns
-                </span>
-                <span>
-                    <strong>&nbspDrug Group</strong>
-                </span>
-            </span>
 
-        </div>
-
-    
 
 </div>
