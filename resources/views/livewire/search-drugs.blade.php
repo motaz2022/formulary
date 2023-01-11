@@ -24,42 +24,41 @@
     <div wire:loading.class.long="opacity-50">
 
         @forelse ($drugs as $drug)
-           
-                <div
-                    class="max-w-4xl p-6 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 mt-2">
-                    <a href="#">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                            {{ $drug->brandName }}</h5>
-                    </a>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{ $drug->genericName }}</p>
+            <div
+                class="max-w-4xl p-6 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 mt-2">
 
-                    <div class=" columns-2">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                    {{ $drug->brandName }}</h5>
 
-                        <div class=" inline-flex">
-                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{ $drug->genericName }}</p>
+
+                <div class=" columns-2">
+
+                    <div class=" inline-flex">
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
 
 
-                                <span
-                                    class="material-symbols-outlined relative top-1.5 left-0 text-green-600">payments</span>
-                                {{ $drug->price }} EGP
-
+                            <span
+                                class="material-symbols-outlined relative top-1.5 left-0 text-green-600">payments</span>
+                            {{ $drug->price }} EGP
 
 
 
-                            </p>
-                        </div>
 
-                        <div class="text-end">
-                            <a href="/drug/{{ $drug->id }}"
-                                class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                More Info
-
-                            </a>
-                        </div>
+                        </p>
                     </div>
 
+                    <div class="text-end">
+                        <a href="/drug/{{ $drug->id }}"
+                            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                            More Info
+
+                        </a>
+                    </div>
                 </div>
-           
+
+            </div>
+
 
 
 
@@ -67,6 +66,15 @@
             <div
                 class="max-w-4xl p-6 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 mt-2">
 
+                <p class="text-center text-red-600 text-xl mx-auto">
+                    <span>
+                        <span style="font-size: 36px"
+                            class="material-symbols-outlined relative top-2.5 left-0 text-red-600 mr-2">search</span>
+                            No Search Results Found
+                            
+                       
+                    </span>
+                </p>
                 <p class="p-6 font-normal text-red-600 dark:text-gray-400  m-auto text-2xl text-center font-sans"><span
                         style="font-size: 36px"
                         class="material-symbols-outlined relative top-2.5 left-0 text-red-600 mr-2">search</span>No

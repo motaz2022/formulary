@@ -66,7 +66,7 @@
 
 
 
-    <div class="p-6 max-w-4xl mx-auto">
+    <div class="px-4 my-2 max-w-4xl mx-auto">
 
         @yield('content')
     </div>

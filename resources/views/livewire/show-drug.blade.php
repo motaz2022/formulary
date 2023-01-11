@@ -18,7 +18,7 @@
                 class="material-symbols-outlined relative top-1.5 left-0 text-sky-500 mr-2">prescriptions</span>Generic Name: {{ $drug->genericName }}
         </p>
         <p class="font-normal text-gray-700 dark:text-gray-400"><span
-                class="material-symbols-outlined relative top-1.5 left-0 text-green-500 mr-2">payments</span>Price: {{ $drug->price }}
+                class="material-symbols-outlined relative top-1.5 left-0 text-green-600 mr-2">payments</span>Price: {{ $drug->price }}
             EGP</p>
         <p class="font-normal text-gray-700 dark:text-gray-400"><span
                 class="material-symbols-outlined relative top-1.5 left-0 text-yellow-500 mr-2">dns</span>Class: {{ $drug->subGroup }}
@@ -26,7 +26,7 @@
     </div>
 
 
-    <div class=" mt-4">
+    <div class="my-4">
 
         <div id="accordion-color" data-accordion="collapse"
             data-active-classes="bg-blue-100 dark:bg-gray-800 dark:text-white">
@@ -45,12 +45,7 @@
                     <span><span
                             class="material-symbols-outlined relative top-1.5 left-0 text-red-500 mr-2">blur_circular</span>Side
                         Effects</span>
-                    <svg data-accordion-icon class="w-6 h-6 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
-                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                            clip-rule="evenodd"></path>
-                    </svg>
+                        <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z"></path></svg>
                 </button>
             </h2>
             <div id="accordion-color-body-1" class="hidden" aria-labelledby="accordion-color-heading-1">
@@ -74,12 +69,7 @@
                         aria-controls="accordion-color-body-2">
                         <span><span
                                 class="material-symbols-outlined relative top-1.5 left-0 text-rose-500 mr-2">pregnant_woman</span>Pregnancy</span></span>
-                        <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                clip-rule="evenodd"></path>
-                        </svg>
+                        <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z"></path></svg>
                     </button>
                 </h2>
                 <div id="accordion-color-body-2" class="hidden" aria-labelledby="accordion-color-heading-2">
@@ -107,12 +97,7 @@
                         aria-controls="accordion-color-body-3">
                         <span><span
                                 class="material-symbols-outlined relative top-1.5 left-0 text-teal-500 mr-2">breastfeeding</span>Breastfeeding</span></span>
-                        <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                clip-rule="evenodd"></path>
-                        </svg>
+                        <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z"></path></svg>
                     </button>
                 </h2>
                 <div id="accordion-color-body-3" class="hidden" aria-labelledby="accordion-color-heading-3">
@@ -136,12 +121,7 @@
                         <span><span
                                 class="material-symbols-outlined relative top-1.5 left-0 text-sky-500 mr-2">ac_unit</span>Storage
                             Conditions</span></span>
-                        <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                clip-rule="evenodd"></path>
-                        </svg>
+                        <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z"></path></svg>
                     </button>
                 </h2>
                 <div id="accordion-color-body-4" class="hidden" aria-labelledby="accordion-color-heading-4">
@@ -164,13 +144,8 @@
                         data-accordion-target="#accordion-color-body-5" aria-expanded="false"
                         aria-controls="accordion-color-body-5">
                         <span><span
-                                class="material-symbols-outlined relative top-1.5 left-0 text-gray-500 mr-2">description</span>Reference</span>
-                        <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                clip-rule="evenodd"></path>
-                        </svg>
+                                class="material-symbols-outlined relative top-1.5 left-0 text-orange-500 mr-2">description</span>Reference</span>
+                        <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z"></path></svg>
                     </button>
                 </h2>
                 <div id="accordion-color-body-5" class="hidden" aria-labelledby="accordion-color-heading-5">
@@ -188,13 +163,8 @@
                         data-accordion-target="#accordion-color-body-5" aria-expanded="false"
                         aria-controls="accordion-color-body-5">
                         <span><span
-                                class="material-symbols-outlined relative top-1.5 left-0 text-gray-500 mr-2">description</span>Reference</span>
-                        <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                clip-rule="evenodd"></path>
-                        </svg>
+                                class="material-symbols-outlined relative top-1.5 left-0 text-orange-500 mr-2">description</span>Reference</span>
+                        <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z"></path></svg>
                     </button>
                 </h2>
                 <div id="accordion-color-body-5" class="hidden" aria-labelledby="accordion-color-heading-5">
