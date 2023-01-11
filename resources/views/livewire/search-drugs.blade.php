@@ -75,9 +75,7 @@
                        
                     </span>
                 </p>
-                <p class="p-6 font-normal text-red-600 dark:text-gray-400  m-auto text-2xl text-center font-sans"><span
-                        style="font-size: 36px"
-                        class="material-symbols-outlined relative top-2.5 left-0 text-red-600 mr-2">search</span>/p>
+                
 
 
             </div>
