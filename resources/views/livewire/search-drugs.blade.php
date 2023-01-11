@@ -64,15 +64,13 @@
 
         @empty
             <div
-                class="max-w-4xl p-6 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 mt-2">
+                class="p-12 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 mt-2">
 
                 <p class="text-center text-red-600 text-xl mx-auto">
                     <span>
                         <span style="font-size: 36px"
                             class="material-symbols-outlined relative top-2.5 left-0 text-red-600 mr-2">search</span>
                             No Search Results Found
-                            
-                       
                     </span>
                 </p>
                 
