@@ -9,55 +9,51 @@
             </div>
         @endif
     </div>
-
-
     <div
         class=" columns-auto mt-2 block p-6 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
         <h5 class="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white">{{ $drug->brandName }}</h5>
         <p class="font-normal text-gray-700 dark:text-gray-400"><span
-                class="material-symbols-outlined relative top-1.5 left-0 text-sky-500 mr-2">prescriptions</span>Generic Name: {{ $drug->genericName }}
+                class="material-symbols-outlined relative top-1.5 left-0 text-sky-500 mr-2">prescriptions</span>Generic
+            Name: {{ $drug->genericName }}
         </p>
         <p class="font-normal text-gray-700 dark:text-gray-400"><span
-                class="material-symbols-outlined relative top-1.5 left-0 text-green-600 mr-2">payments</span>Price: {{ $drug->price }}
+                class="material-symbols-outlined relative top-1.5 left-0 text-green-600 mr-2">payments</span>Price:
+            {{ $drug->price }}
             EGP</p>
         <p class="font-normal text-gray-700 dark:text-gray-400"><span
-                class="material-symbols-outlined relative top-1.5 left-0 text-yellow-500 mr-2">dns</span>Class: {{ $drug->subGroup }}
+                class="material-symbols-outlined relative top-1.5 left-0 text-yellow-500 mr-2">dns</span>Class:
+            {{ $drug->subGroup }}
         </p>
     </div>
-
-
     <div class="my-4">
-
         <div id="accordion-color" data-accordion="collapse"
             data-active-classes="bg-blue-100 dark:bg-gray-800 dark:text-white">
-
-             {{-- Check Side effects --}}
-
+            {{-- Check Side effects --}}
             @if ($drug->sideEffects == '')
             @else
-
-            {{-- accordion 1 Side effects --}}
-            <h2 id="accordion-color-heading-1">
-                <button type="button"
-                    class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800"
-                    data-accordion-target="#accordion-color-body-1" aria-expanded="false"
-                    aria-controls="accordion-color-body-1">
-                    <span><span
-                            class="material-symbols-outlined relative top-1.5 left-0 text-red-500 mr-2">blur_circular</span>Side
-                        Effects</span>
-                        <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z"></path></svg>
-                </button>
-            </h2>
-            <div id="accordion-color-body-1" class="hidden" aria-labelledby="accordion-color-heading-1">
-                <div class="p-5 font-sans border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
-                    <p class="mb-2 text-gray-500 dark:text-gray-400">{!! $drug->sideEffects !!}</p>
-
+                {{-- accordion 1 Side effects --}}
+                <h2 id="accordion-color-heading-1">
+                    <button type="button"
+                        class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800"
+                        data-accordion-target="#accordion-color-body-1" aria-expanded="false"
+                        aria-controls="accordion-color-body-1">
+                        <span><span
+                                class="material-symbols-outlined relative top-1.5 left-0 text-red-500 mr-2">blur_circular</span>Side
+                            Effects</span>
+                        <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z"></path>
+                        </svg>
+                    </button>
+                </h2>
+                <div id="accordion-color-body-1" class="hidden" aria-labelledby="accordion-color-heading-1">
+                    <div class="p-5 font-sans border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+                        <p class="mb-2 text-gray-500 dark:text-gray-400">{!! $drug->sideEffects !!}</p>
+                    </div>
                 </div>
-            </div>
-            {{-- End accordion 1 Side effects --}}
+                {{-- End accordion 1 Side effects --}}
             @endif
-
-
             {{-- Check Pregnancy --}}
             @if ($drug->pregnancy == '')
             @else
@@ -68,24 +64,21 @@
                         data-accordion-target="#accordion-color-body-2" aria-expanded="false"
                         aria-controls="accordion-color-body-2">
                         <span><span
-                                class="material-symbols-outlined relative top-1.5 left-0 text-rose-500 mr-2">pregnant_woman</span>Pregnancy</span></span>
-                        <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z"></path></svg>
+                                class="material-symbols-outlined relative top-1.5 left-0 text-violet-500 mr-2">pregnant_woman</span>Pregnancy</span></span>
+                        <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z"></path>
+                        </svg>
                     </button>
                 </h2>
                 <div id="accordion-color-body-2" class="hidden" aria-labelledby="accordion-color-heading-2">
                     <div class="p-5 font-sans border border-b-0 border-gray-200 dark:border-gray-700">
                         <p class="mb-2 text-gray-500 dark:text-gray-400">{!! $drug->pregnancy !!}</p>
-
                     </div>
                 </div>
                 {{-- end accordion 2 Pregnancy --}}
             @endif
-
-
-
-
-
-
             {{-- Check Breastfeeding --}}
             @if ($drug->breastfeeding == '')
             @else
@@ -97,18 +90,20 @@
                         aria-controls="accordion-color-body-3">
                         <span><span
                                 class="material-symbols-outlined relative top-1.5 left-0 text-teal-500 mr-2">breastfeeding</span>Breastfeeding</span></span>
-                        <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z"></path></svg>
+                        <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z"></path>
+                        </svg>
                     </button>
                 </h2>
                 <div id="accordion-color-body-3" class="hidden" aria-labelledby="accordion-color-heading-3">
                     <div class="p-5 font-sans border border-b-0 border-gray-200 dark:border-gray-700">
                         <p class="mb-2 text-gray-500 dark:text-gray-400">{!! $drug->breastfeeding !!}</p>
-
                     </div>
                 </div>
             @endif
             {{-- end accordion 3 Breastfeeding  --}}
-
             {{-- Check Storage Conditions --}}
             @if ($drug->storage == '')
             @else
@@ -121,19 +116,20 @@
                         <span><span
                                 class="material-symbols-outlined relative top-1.5 left-0 text-sky-500 mr-2">ac_unit</span>Storage
                             Conditions</span></span>
-                        <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z"></path></svg>
+                        <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z"></path>
+                        </svg>
                     </button>
                 </h2>
                 <div id="accordion-color-body-4" class="hidden" aria-labelledby="accordion-color-heading-4">
                     <div class="p-5 font-sans border border-b-0 border-gray-200 dark:border-gray-700">
                         <p class="mb-2 text-gray-500 dark:text-gray-400">{!! $drug->storage !!}</p>
-
                     </div>
                 </div>
-
                 {{-- end accordion 4 Storage Condition --}}
             @endif
-
             {{-- also this type accordion should be the last one if you want add another add from code above --}}
             {{-- Check Storage Conditions  --}}
             @if ($drug->reference == '')
@@ -145,7 +141,11 @@
                         aria-controls="accordion-color-body-5">
                         <span><span
                                 class="material-symbols-outlined relative top-1.5 left-0 text-orange-500 mr-2">description</span>Reference</span>
-                        <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z"></path></svg>
+                        <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z"></path>
+                        </svg>
                     </button>
                 </h2>
                 <div id="accordion-color-body-5" class="hidden" aria-labelledby="accordion-color-heading-5">
@@ -153,7 +153,6 @@
                         <p class="mb-2 text-gray-500 dark:text-gray-400">Drug leaflet</p>
                     </div>
                 </div>
-
                 {{-- end accordion 5 reference Condition --}}
             @else
                 {{--  accordion 5 reference Condition --}}
@@ -164,7 +163,11 @@
                         aria-controls="accordion-color-body-5">
                         <span><span
                                 class="material-symbols-outlined relative top-1.5 left-0 text-orange-500 mr-2">description</span>Reference</span>
-                        <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z"></path></svg>
+                        <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z"></path>
+                        </svg>
                     </button>
                 </h2>
                 <div id="accordion-color-body-5" class="hidden" aria-labelledby="accordion-color-heading-5">
@@ -172,15 +175,8 @@
                         <p class="mb-2 text-gray-500 dark:text-gray-400">{!! $drug->reference !!}</p>
                     </div>
                 </div>
-
                 {{-- end accordion 5 reference Condition --}}
             @endif
-
-
-
         </div>
-
     </div>
-
-
 </div>
