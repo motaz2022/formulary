@@ -31,7 +31,7 @@ class SearchDrugs extends Component
             $query->where('genericName', 'like', '%'.$this->search.'%')
                 ->orWhere('brandName', 'like', '%'.$this->search.'%');
         })->where('availability', 1)
-        ->simplepaginate(7);
+        ->simplepaginate(8);
         return view('livewire.search-drugs', compact('drugs'));
     }
 }
