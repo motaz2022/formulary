@@ -20,7 +20,41 @@
             class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="Search Generic, Brand..." required>
     </div>
+    {{-- First searh --}}
     <div wire:loading.class.long="opacity-50">
+        <div class="relative overflow-x-auto shadow-lg sm:rounded-lg border my-2">
+            <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                <tbody>
+                    @forelse ($drugs as $drug)
+                        <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700 shadow-4xl">
+                            <th scope="row"
+                                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                {{ $drug->brandName }}
+                            </th>
+                            <td class="px-2 py-4">
+                                <a href="/drug/{{ $drug->id }}"
+                                    class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800">
+                                    More
+                                </a>
+                            </td>
+                    </tr> @empty
+                        <td
+                            class="p-12 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 mt-2">
+                            <p class="text-center text-red-600 text-xl mx-auto">
+                                <span>
+                                    <span style="font-size: 36px"
+                                        class="material-symbols-outlined relative top-2.5 left-0 text-red-600 mr-2">search</span>
+                                    No Search Results Found
+                                </span>
+                            </p>
+                        </td>
+                    @endforelse
+                </tbody>
+            </table>
+        </div>
+    </div>
+    {{-- END First searh --}} {{-- 2nd searh --}}
+    {{-- <div wire:loading.class.long="opacity-50">
         @forelse ($drugs as $drug)
             <div
                 class="max-w-4xl p-6 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 mt-2">
@@ -55,9 +89,10 @@
                 </p>
             </div>
         @endforelse
-    </div>
-    {{-- pagination --}}
+    </div> --}}
+    {{-- END 2nd searh --}} {{-- pagination --}}
     <div class="mt-2">
         {{ $drugs->links() }}
     </div>
+    {{-- END pagination --}}
 </div>
