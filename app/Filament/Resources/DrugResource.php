@@ -49,6 +49,7 @@ class DrugResource extends Resource
                                 'capsule' => 'Capsule',
                                 'ampoule' => 'Ampoule',
                                 'vial' => 'Vial',
+                                'syringe' => 'Syringe',
                                 'ointment' => 'Ointment',
                                 'cream' => 'Cream',
                                 'suppository ' => 'Suppository ',
