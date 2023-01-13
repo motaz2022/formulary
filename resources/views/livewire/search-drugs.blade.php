@@ -22,7 +22,7 @@
     </div>
     {{-- First searh --}}
     <div wire:loading.class.long="opacity-50">
-        <div class="relative overflow-x-auto shadow-lg sm:rounded-lg border my-2">
+        <div class="relative overflow-x-auto shadow-lg sm:rounded-lg border my-2 rounded-lg">
             <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                 <tbody>
                     @forelse ($drugs as $drug)
