@@ -28,14 +28,16 @@
     {{-- Bulma --}}
     {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"> --}}
     {{-- flowbite --}}
-    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.6.0/dist/flowbite.min.css" />
+    {{-- <link rel="stylesheet" href="https://unpkg.com/flowbite@1.6.0/dist/flowbite.min.css" /> --}}
     {{-- tailwindcss --}}
-    <script src="https://cdn.tailwindcss.com"></script>
+    {{-- <script src="https://cdn.tailwindcss.com"></script> --}}
     {{-- fontawesome --}}
     <script src="https://kit.fontawesome.com/fd0b59a77d.js" crossorigin="anonymous"></script>
     {{-- google fonts icons --}}
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.6.0/dist/flowbite.min.css" />
+
+    <link href="/css/app.css" rel="stylesheet" />
+    
     {{-- <style>
         .op {
             opacity: 0.25;
@@ -81,7 +83,10 @@
         </div>
     </footer>
     {{-- END footer --}}
-    <script src="https://unpkg.com/flowbite@1.6.0/dist/flowbite.min.js"></script>
+
+    {{-- flowbate script --}}
+    <script src="\js\flowbite.min.js"></script>
+    {{-- <script src="https://unpkg.com/flowbite@1.6.0/dist/flowbite.min.js"></script> --}}
     @livewireScripts
 </body>
 
