@@ -20,8 +20,48 @@
             class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="Search Generic, Brand..." required>
     </div>
-    {{-- First searh --}}
+
+    {{-- 0 searh --}}
     <div wire:loading.class.long="opacity-50">
+
+        @forelse ($drugs as $drug)
+            <div
+                class="block p-2 mt-1 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+                <div class="flex">
+                    <div class=" w-8/12 mt-1">
+                        <small class="mb-2 text-md font-bold tracking-tight text-gray-900 dark:text-white">{{ $drug->brandName }}</small>
+                        {{-- <h5 class="mb-2 text-md font-bold tracking-tight text-gray-900 dark:text-white">
+                            {{ $drug->brandName }}</h5> --}}
+                    </div>
+                    <div class="text-end w-4/12">
+                        <a href="/drug/{{ $drug->id }}"
+                            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800">
+                            More
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        @empty
+        <div
+                class="p-12 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 mt-2">
+                <p class="text-center text-red-600 text-xl mx-auto">
+                    <span>
+                        <span style="font-size: 36px"
+                            class="material-symbols-outlined relative top-2.5 left-0 text-red-600 mr-2">search</span>
+                        No Search Results Found
+                    </span>
+                </p>
+            </div>
+        @endforelse
+
+
+    </div>
+    {{-- END 0 searh --}}
+
+    {{-- First searh --}}
+    {{-- <div wire:loading.class.long="opacity-50">
         <div class="relative overflow-x-auto shadow-lg sm:rounded-lg border my-2 rounded-lg">
             <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                 <tbody>
@@ -52,7 +92,7 @@
                 </tbody>
             </table>
         </div>
-    </div>
+    </div> --}}
     {{-- END First searh --}} {{-- 2nd searh --}}
     {{-- <div wire:loading.class.long="opacity-50">
         @forelse ($drugs as $drug)
