@@ -49,7 +49,7 @@
                 </h2>
                 <div id="accordion-color-body-1" class="hidden" aria-labelledby="accordion-color-heading-1">
                     <div class="p-5 font-sans border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
-                        <p class="mb-2 text-gray-500 dark:text-gray-400">{!! $drug->sideEffects !!}</p>
+                        <p class="mb-2  text-black dark:text-gray-400">{!! $drug->sideEffects !!}</p>
                     </div>
                 </div>
                 {{-- End accordion 1 Side effects --}}
@@ -74,7 +74,7 @@
                 </h2>
                 <div id="accordion-color-body-2" class="hidden" aria-labelledby="accordion-color-heading-2">
                     <div class="p-5 font-sans border border-b-0 border-gray-200 dark:border-gray-700">
-                        <p class="mb-2 text-gray-500 dark:text-gray-400">{!! $drug->pregnancy !!}</p>
+                        <p class="mb-2  text-black dark:text-gray-400">{!! $drug->pregnancy !!}</p>
                     </div>
                 </div>
                 {{-- end accordion 2 Pregnancy --}}
@@ -99,7 +99,7 @@
                 </h2>
                 <div id="accordion-color-body-3" class="hidden" aria-labelledby="accordion-color-heading-3">
                     <div class="p-5 font-sans border border-b-0 border-gray-200 dark:border-gray-700">
-                        <p class="mb-2 text-gray-500 dark:text-gray-400">{!! $drug->breastfeeding !!}</p>
+                        <p class="mb-2  text-black dark:text-gray-400">{!! $drug->breastfeeding !!}</p>
                     </div>
                 </div>
             @endif
@@ -125,7 +125,7 @@
                 </h2>
                 <div id="accordion-color-body-4" class="hidden" aria-labelledby="accordion-color-heading-4">
                     <div class="p-5 font-sans border border-b-0 border-gray-200 dark:border-gray-700">
-                        <p class="mb-2 text-gray-500 dark:text-gray-400">{!! $drug->storage !!}</p>
+                        <p class="mb-2  text-black dark:text-gray-400">{!! $drug->storage !!}</p>
                     </div>
                 </div>
                 {{-- end accordion 4 Storage Condition --}}
@@ -150,7 +150,7 @@
                 </h2>
                 <div id="accordion-color-body-5" class="hidden" aria-labelledby="accordion-color-heading-5">
                     <div class="p-5 font-sans border border-t-0 border-gray-200 dark:border-gray-700">
-                        <p class="mb-2 text-gray-500 dark:text-gray-400">Drug leaflet</p>
+                        <p class="mb-2  text-black dark:text-gray-400">Drug leaflet</p>
                     </div>
                 </div>
                 {{-- end accordion 5 reference Condition --}}
@@ -172,7 +172,7 @@
                 </h2>
                 <div id="accordion-color-body-5" class="hidden" aria-labelledby="accordion-color-heading-5">
                     <div class="p-5 font-sans border border-t-0 border-gray-200 dark:border-gray-700">
-                        <p class="mb-2 text-gray-500 dark:text-gray-400">{!! $drug->reference !!}</p>
+                        <p class="mb-2  text-black dark:text-gray-400">{!! $drug->reference !!}</p>
                     </div>
                 </div>
                 {{-- end accordion 5 reference Condition --}}
