@@ -26,6 +26,10 @@ return new class extends Migration
             $table->text('cautions')->nullable();
             $table->text('pregnancy')->nullable();
             $table->text('breastfeeding')->nullable();
+            $table->boolean('msi')->default(false);
+            $table->boolean('hams')->default(false);
+            $table->text('soundLook')->nullable();
+            $table->boolean('highConc')->default(false);
             $table->text('storage')->nullable();
             $table->text('reference')->nullable();
             $table->boolean('availability')->default(false);

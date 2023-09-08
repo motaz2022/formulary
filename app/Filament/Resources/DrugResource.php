@@ -66,6 +66,10 @@ class DrugResource extends Resource
                         // Textarea::make('cautions')->label('Cautions'),
                         RichEditor::make('pregnancy')->label('Pregnancy'),
                         RichEditor::make('breastfeeding')->label('Breastfeeding'),
+                        Toggle::make('msi')->label('Do you want to show safety medication safety issues?'),
+                        Toggle::make('hams')->label('High alert medication'),
+                        Toggle::make('highConc')->label('High concentrated electrolytes'),
+                        RichEditor::make('soundLook')->label('Sound-alike/look-alike issues'),
                         Textarea::make('storage')->label('Storage'),
                         TextInput::make('reference')->label('Reference'),
                         Toggle::make('availability')->label('Availability')
@@ -73,6 +77,7 @@ class DrugResource extends Resource
             ]);
     }
 
+  
     public static function table(Table $table): Table
     {
         return $table

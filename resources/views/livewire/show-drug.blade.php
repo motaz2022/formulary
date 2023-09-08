@@ -38,7 +38,7 @@
                         data-accordion-target="#accordion-color-body-1" aria-expanded="false"
                         aria-controls="accordion-color-body-1">
                         <span><span
-                                class="material-symbols-outlined relative top-1.5 left-0 text-red-500 mr-2">blur_circular</span>Side
+                                class="material-symbols-outlined relative top-1.5 left-0 text-yellow-500 mr-2">blur_circular</span>Side
                             Effects</span>
                         <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="none" stroke="currentColor"
                             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -104,6 +104,95 @@
                 </div>
             @endif
             {{-- end accordion 3 Breastfeeding  --}}
+
+            {{-- Medication Safety Issues --}}
+            @if ($drug->msi == false)
+            @else
+                {{--  Medication Safety Issues --}}
+                <h2 id="accordion-color-heading-3">
+                    <button type="button"
+                        class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800"
+                        data-accordion-target="#accordion-color-body-3" aria-expanded="false"
+                        aria-controls="accordion-color-body-3">
+                        <span><span
+                                class="material-symbols-outlined relative top-1.5 left-0 text-red-500 mr-2">error</span>Medication
+                            Safety Issues</span></span>
+                        <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z"></path>
+                        </svg>
+                    </button>
+                </h2>
+
+                <div id="accordion-color-body-3" class="hidden" aria-labelledby="accordion-color-heading-3">
+                    @if ($drug->hams == true)
+                        <div class="p-5 font-sans border border-b-0 border-gray-200 dark:border-gray-700">
+                            <div class="flex items-center">
+                                <svg class="w-3.5 h-3.5 mr-2 text-red-500 dark:text-red-400 flex-shrink-0"
+                                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                                </svg>
+                                <b>High Alert Medications</b>
+                                
+                            </div>
+                            <p class="mb-2 mx-6  text-black dark:text-gray-400">The Institute for Safe Medication
+                                Practices (ISMP) includes this medication among its list of
+                                drugs which have a heightened risk of causing significant patient harm when used in error.</p>
+
+
+                        </div>
+                    @endif
+
+                    @if ($drug->soundLook == '')
+                    @else
+                        <div class="p-5 font-sans border border-b-0 border-gray-200 dark:border-gray-700">
+                            <div class="flex items-center">
+                                <svg class="w-3.5 h-3.5 mr-2 text-blue-500 dark:text-blue-400 flex-shrink-0"
+                                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                                </svg>
+                                <b>Sound-alike/look-alike issues:</b>
+                            </div>
+                            <p class="mb-2 mx-6  text-black dark:text-gray-400">{!! $drug->soundLook !!}</p>
+
+
+
+                        </div>
+                    @endif
+
+                    @if ($drug->highConc == true)
+                        <div class="p-5 font-sans border border-b-0 border-gray-200 dark:border-gray-700">
+                            <div class="flex items-center">
+                                <svg class="w-3.5 h-3.5 mr-2 text-yellow-400 dark:text-yellow-300 flex-shrink-0"
+                                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                                </svg>
+                                <b>High Concentrated Electrolytes</b>
+                                
+                            </div>
+
+
+
+                        </div>
+                    @endif
+                </div>
+
+
+
+            @endif
+            {{-- end Medication Safety Issues  --}}
+
+
+
+
+
             {{-- Check Storage Conditions --}}
             @if ($drug->storage == '')
             @else
