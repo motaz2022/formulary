@@ -140,9 +140,12 @@
                                 <b>High Alert Medications</b>
                                 
                             </div>
-                            <p class="mb-2 mx-6  text-black dark:text-gray-400">The Institute for Safe Medication
-                                Practices (ISMP) includes this medication among its list of
-                                drugs which have a heightened risk of causing significant patient harm when used in error.</p>
+                            <div class="mx-6">
+                                <p class="mb-2   text-black dark:text-gray-400">The Institute for Safe Medication
+                                    Practices (ISMP) includes this medication among its list of
+                                    drugs which have a heightened risk of causing significant patient harm when used in error.</p>
+                            </div>
+                            
 
 
                         </div>
@@ -160,7 +163,12 @@
                                 </svg>
                                 <b>Sound-alike/look-alike issues:</b>
                             </div>
-                            <p class="mb-2 mx-6  text-black dark:text-gray-400">{!! $drug->soundLook !!}</p>
+
+                            <div class="mx-6">
+                                <p class="mb-2 text-black dark:text-gray-400">{!! $drug->soundLook !!}</p>
+                            </div>
+                            
+                            
 
 
 
