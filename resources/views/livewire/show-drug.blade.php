@@ -105,15 +105,17 @@
             @endif
             {{-- end accordion 3 Breastfeeding  --}}
 
+            {{-- Start accordion 4 Medication Safety Issues  --}}
+
             {{-- Medication Safety Issues --}}
             @if ($drug->msi == false)
             @else
                 {{--  Medication Safety Issues --}}
-                <h2 id="accordion-color-heading-3">
+                <h2 id="accordion-color-heading-4">
                     <button type="button"
                         class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800"
-                        data-accordion-target="#accordion-color-body-3" aria-expanded="false"
-                        aria-controls="accordion-color-body-3">
+                        data-accordion-target="#accordion-color-body-4" aria-expanded="false"
+                        aria-controls="accordion-color-body-4">
                         <span><span
                                 class="material-symbols-outlined relative top-1.5 left-0 text-red-500 mr-2">error</span>Medication
                             Safety Issues</span></span>
@@ -125,7 +127,7 @@
                     </button>
                 </h2>
 
-                <div id="accordion-color-body-3" class="hidden" aria-labelledby="accordion-color-heading-3">
+                <div id="accordion-color-body-4" class="hidden" aria-labelledby="accordion-color-heading-4">
                     @if ($drug->hams == true)
                         <div class="p-5 font-sans border border-b-0 border-gray-200 dark:border-gray-700">
                             <div class="flex items-center">
@@ -188,6 +190,7 @@
 
             @endif
             {{-- end Medication Safety Issues  --}}
+            {{-- End accordion 4 Medication Safety Issues  --}}
 
 
 
@@ -196,12 +199,12 @@
             {{-- Check Storage Conditions --}}
             @if ($drug->storage == '')
             @else
-                {{--  accordion 4 Storage Condition --}}
-                <h2 id="accordion-color-heading-4">
+                {{--  accordion 5 Storage Condition --}}
+                <h2 id="accordion-color-heading-5">
                     <button type="button"
                         class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800"
-                        data-accordion-target="#accordion-color-body-4" aria-expanded="false"
-                        aria-controls="accordion-color-body-4">
+                        data-accordion-target="#accordion-color-body-5" aria-expanded="false"
+                        aria-controls="accordion-color-body-5">
                         <span><span
                                 class="material-symbols-outlined relative top-1.5 left-0 text-sky-500 mr-2">ac_unit</span>Storage
                             Conditions</span></span>
@@ -212,22 +215,22 @@
                         </svg>
                     </button>
                 </h2>
-                <div id="accordion-color-body-4" class="hidden" aria-labelledby="accordion-color-heading-4">
+                <div id="accordion-color-body-5" class="hidden" aria-labelledby="accordion-color-heading-5">
                     <div class="p-5 font-sans border border-b-0 border-gray-200 dark:border-gray-700">
                         <p class="mb-2  text-black dark:text-gray-400">{!! $drug->storage !!}</p>
                     </div>
                 </div>
-                {{-- end accordion 4 Storage Condition --}}
+                {{-- end accordion 5 Storage Condition --}}
             @endif
             {{-- also this type accordion should be the last one if you want add another add from code above --}}
             {{-- Check Storage Conditions  --}}
             @if ($drug->reference == '')
-                {{--  accordion 5 reference Condition --}}
-                <h2 id="accordion-color-heading-5">
+                {{--  accordion 6 reference Condition --}}
+                <h2 id="accordion-color-heading-6">
                     <button type="button"
                         class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800"
-                        data-accordion-target="#accordion-color-body-5" aria-expanded="false"
-                        aria-controls="accordion-color-body-5">
+                        data-accordion-target="#accordion-color-body-6" aria-expanded="false"
+                        aria-controls="accordion-color-body-6">
                         <span><span
                                 class="material-symbols-outlined relative top-1.5 left-0 text-orange-500 mr-2">description</span>Reference</span>
                         <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="none" stroke="currentColor"
@@ -237,19 +240,19 @@
                         </svg>
                     </button>
                 </h2>
-                <div id="accordion-color-body-5" class="hidden" aria-labelledby="accordion-color-heading-5">
+                <div id="accordion-color-body-6" class="hidden" aria-labelledby="accordion-color-heading-6">
                     <div class="p-5 font-sans border border-t-0 border-gray-200 dark:border-gray-700">
                         <p class="mb-2  text-black dark:text-gray-400">Drug leaflet</p>
                     </div>
                 </div>
-                {{-- end accordion 5 reference Condition --}}
+                {{-- end accordion 6 reference Condition --}}
             @else
-                {{--  accordion 5 reference Condition --}}
-                <h2 id="accordion-color-heading-5">
+                {{--  accordion 6 reference Condition --}}
+                <h2 id="accordion-color-heading-6">
                     <button type="button"
                         class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800"
-                        data-accordion-target="#accordion-color-body-5" aria-expanded="false"
-                        aria-controls="accordion-color-body-5">
+                        data-accordion-target="#accordion-color-body-6" aria-expanded="false"
+                        aria-controls="accordion-color-body-6">
                         <span><span
                                 class="material-symbols-outlined relative top-1.5 left-0 text-orange-500 mr-2">description</span>Reference</span>
                         <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="none" stroke="currentColor"
@@ -259,12 +262,12 @@
                         </svg>
                     </button>
                 </h2>
-                <div id="accordion-color-body-5" class="hidden" aria-labelledby="accordion-color-heading-5">
+                <div id="accordion-color-body-6" class="hidden" aria-labelledby="accordion-color-heading-6">
                     <div class="p-5 font-sans border border-t-0 border-gray-200 dark:border-gray-700">
                         <p class="mb-2  text-black dark:text-gray-400">{!! $drug->reference !!}</p>
                     </div>
                 </div>
-                {{-- end accordion 5 reference Condition --}}
+                {{-- end accordion 6 reference Condition --}}
             @endif
         </div>
     </div>
