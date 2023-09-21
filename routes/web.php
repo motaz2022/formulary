@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\ShowDrug;
+use App\Http\Livewire\Contact;
 
 
 /*
@@ -20,3 +21,5 @@ Route::get('/', function () {
 });
 
 Route::get('/drug/{drug}', ShowDrug::class);
+
+Route::get('/report', Contact::class)->name('report');

@@ -24,7 +24,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ERMC Formulary</title>
-    <meta name="description" content="The Clinical Pharmacy Department at the Egyptian Railway Hospital presents a web application formulary list, that includes medication generic name, brand name, class, price and possible side effects. It's designed and developed by clinical pharmacy department to provide healthcare professionals with easy access to the medications approved for use within the Egyptian Railway Hospital.">
+    <meta name="description"
+        content="The Clinical Pharmacy Department at the Egyptian Railway Hospital presents a web application formulary list, that includes medication generic name, brand name, class, price and possible side effects. It's designed and developed by clinical pharmacy department to provide healthcare professionals with easy access to the medications approved for use within the Egyptian Railway Hospital.">
     <meta name="keywords" content="Clinical, Pharmacy, Department, Railway, Hospital, medications, healthcare">
     <meta name="author" content="Clinical Pharmacy Department">
     <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
@@ -39,8 +40,8 @@
     {{-- google fonts icons --}}
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 
-    @vite(['resources/css/app.css','resources/js/app.js'])
-    
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+
     {{-- <style>
         .op {
             opacity: 0.25;
@@ -50,8 +51,14 @@
 </head>
 
 <body>
+
+
     <div class="mt-3 max-w-lg mx-auto">
         <a href="/"><img class="" src="{{ asset('svg/formulary.svg') }}" alt=""></a>
+
+       
+    </div>
+
     </div>
     <div class="px-4 my-2 max-w-4xl mx-auto">
         @yield('content')
