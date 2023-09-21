@@ -94,6 +94,7 @@
                                 <option value="High Concentrated Electrolytes">High Concentrated Electrolytes</option>
                                 <option value="Look alike">Look alike</option>
                                 <option value="Sound alike">Sound alike</option>
+                                <option value="Sound alike">Other</option>
                             </select>
                             @error('medicationSafetyIssues')
                                 <span class="error text-red-600">{{ $message }}</span>
