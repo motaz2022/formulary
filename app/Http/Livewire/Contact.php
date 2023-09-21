@@ -111,7 +111,7 @@ class Contact extends Component
     public function anotherContact()
     {
         // Redirect to the home page
-        return redirect('/contact');
+        return redirect('/report');
     }
 
 
