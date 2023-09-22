@@ -3,8 +3,8 @@
     <section class="bg-white dark:bg-gray-900 m-0">
 
         <div class="py-4 px-4 mx-auto max-w-2xl">
-            <h2 class="mb-4 text-xl font-bold text-gray-900 dark:text-white text-center">Reporting
-                Medication Safety Issues</h2>
+            <h2 class="mb-4 text-xl font-bold text-gray-900 dark:text-white text-center">
+                Medication Safety Issue Form</h2>
             @if ($formSubmitted)
                 <div class="bg-green-200 text-green-800 p-2 rounded">
                     Progress
@@ -78,6 +78,8 @@
                                 <option value="Inpatient Pharmacy - 2nd Floor Pharmacy">Inpatient Pharmacy - 2nd Floor
                                     Pharmacy</option>
                                 <option value="Emergency Pharmacy">Emergency Pharmacy</option>
+                                <option value="Main store pharmacy">Main store pharmacy</option>
+                                <option value="Any other pharmacy">Any other pharmacy</option>
                             </select>
                             @error('pharmacy')
                                 <span class="error text-red-600">{{ $message }}</span>

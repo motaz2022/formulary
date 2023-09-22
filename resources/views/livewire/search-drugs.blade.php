@@ -9,7 +9,7 @@
     </svg>
     <span class="sr-only">Info</span>
     <div class="ml-3 text-sm font-medium">
-        To report medication safety issue <a href="{{ route('report') }}"
+        To report a medication safety issue <a href="{{ route('report') }}"
             class="font-semibold underline hover:no-underline">Click Here</a>
     </div>
     <button type="button"
