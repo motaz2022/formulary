@@ -80,8 +80,8 @@
                                     <option value="Oncology Pharmacy">Oncology Pharmacy</option>
                                     
                                 <option value="Emergency Pharmacy">Emergency Pharmacy</option>
-                                <option value="Main Store Pharmacy">Main store pharmacy</option>
-                                <option value="Any Other Pharmacy">Any other pharmacy</option>
+                                <option value="Main Store Pharmacy">Main Store Pharmacy</option>
+                                <option value="Any Other Pharmacy">Any Other Pharmacy</option>
                             </select>
                             @error('pharmacy')
                                 <span class="error text-red-600">{{ $message }}</span>
