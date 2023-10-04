@@ -72,15 +72,13 @@
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-red-500 dark:focus:border-red-500">
                                 <option value="">Select</option>
                                 <option value="Anesthesiology">Anesthesiology</option>
-                                <option value="Emergency Department">Cardiology</option>
+                                <option value="Cardiac Care Unit">Cardiac Care Unit</option>
+                                <option value="Critical Care Unit">Critical Care Unit</option>
                                 <option value="Psychiatry">Emergency Department</option>
                                 <option value="Gastroenterology">Gastroenterology</option>
                                 <option value="General surgery">General surgery</option>
                                 <option value="Haematology">Haematology</option>
                                 <option value="Intensive Care Unit">Intensive Care Unit</option>
-                                <option value="Critical Care Unit">Critical Care Unit</option>
-                                <option value="Cardiac Care Unit">Cardiac Care Unit</option>
-                                <option value="Cardiac Care Unit">Cardiac Care Unit</option>
                                 <option value="Intermediate Care Unit">Intermediate Care Unit</option>
                                 <option value="Neurology">Neurology</option>
                                 <option value="Oncology">Oncology</option>
