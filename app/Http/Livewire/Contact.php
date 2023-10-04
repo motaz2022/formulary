@@ -74,7 +74,7 @@ class Contact extends Component
             'name' => $this->name,
             'mobile' => $this->mobile,
             'email' => $this->email,
-            'pharmacy' => $this->department,
+            'department' => $this->department,
             'medicationSafetyIssues' => $this->medicationSafetyIssues,
             'description' => $this->description
 
