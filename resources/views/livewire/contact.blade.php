@@ -67,11 +67,32 @@
 
                         <div class="sm:col-span-2">
                             <label for="category"
-                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Pharmacy</label>
-                            <select wire:model='pharmacy' id="category"
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Department</label>
+                            <select wire:model='department' id="category"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-red-500 dark:focus:border-red-500">
                                 <option value="">Select</option>
-                                <option value="Acute Pharmacy">Acute Pharmacy</option>
+                                <option value="Anesthesiology">Anesthesiology</option>
+                                <option value="Cardiology">Cardiology</option>
+                                <option value="Gastroenterology">Gastroenterology</option>
+                                <option value="General surgery">General surgery</option>
+                                <option value="Haematology">Haematology</option>
+                                <option value="Intensive care Units">Intensive care Units</option>
+                                <option value="Internal medicine">Internal medicine</option>
+                                <option value="Neurology">Neurology</option>
+                                <option value="Oncology">Oncology</option>
+                                <option value="Obstetrics and gynaecology">Obstetrics and gynaecology</option>
+                                <option value="Ophthalmology">Ophthalmology</option>
+                                <option value="Orthopedics">Orthopedics</option>
+                                <option value="Otorhinolaryngology">Otorhinolaryngology</option>
+                                <option value="Outpatient department">Outpatient department</option>
+                                <option value="Pediatrics">Pediatrics</option>
+                                <option value="Pharmacy">Pharmacy</option>
+                                <option value="Physiotherapy">Physiotherapy</option>
+                                <option value="Radiology">Radiology</option>
+                                <option value="Psychiatry">Psychiatry</option>
+                                <option value="Psychiatry">Urology</option>
+
+                                {{-- <option value="Acute Pharmacy">Acute Pharmacy</option>
                                 <option value="Chronic Pharmacy">Chronic Pharmacy</option>
                                 <option value="Care Pharmacy - 4th Floor Pharmacy">Care Pharmacy - 4th Floor Pharmacy
                                 </option>
@@ -81,9 +102,9 @@
                                     
                                 <option value="Emergency Pharmacy">Emergency Pharmacy</option>
                                 <option value="Main Store Pharmacy">Main Store Pharmacy</option>
-                                <option value="Any Other Pharmacy">Any Other Pharmacy</option>
+                                <option value="Any Other Pharmacy">Any Other Pharmacy</option> --}}
                             </select>
-                            @error('pharmacy')
+                            @error('department')
                                 <span class="error text-red-600">{{ $message }}</span>
                             @enderror
                         </div>

@@ -11,7 +11,7 @@ class Contact extends Component
     public $name;
     public $mobile;
     public $email;
-    public $pharmacy;
+    public $department;
     public $medicationSafetyIssues;
     public $description;
     public $formSubmitted = false; // Property to track form submission
@@ -24,7 +24,7 @@ class Contact extends Component
         'name' => 'required|min:6',
         'mobile' => 'required|numeric|digits:11|regex:/^01[0-9]{9}$/',
         'email' => 'required|email',
-        'pharmacy' => 'required',
+        'department' => 'required',
         'medicationSafetyIssues' => 'required',
         'description' => 'required|min:10',
     ];
@@ -47,9 +47,9 @@ class Contact extends Component
     }
 
     // Real-time validation for pharmacy
-    public function updatedPharmacy()
+    public function updatedDepartment()
     {
-        $this->validateOnly('pharmacy');
+        $this->validateOnly('department');
     }
 
     // Real-time validation for medicationSafetyissues
@@ -74,7 +74,7 @@ class Contact extends Component
             'name' => $this->name,
             'mobile' => $this->mobile,
             'email' => $this->email,
-            'pharmacy' => $this->pharmacy,
+            'pharmacy' => $this->department,
             'medicationSafetyIssues' => $this->medicationSafetyIssues,
             'description' => $this->description
 
@@ -97,7 +97,7 @@ class Contact extends Component
         $this->name = '';
         $this->mobile = '';
         $this->email = '';
-        $this->pharmacy = '';
+        $this->department = '';
         $this->medicationSafetyIssues = '';
         $this->description = '';
     }

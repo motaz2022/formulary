@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('mobile', 11);
             $table->string('email');
-            $table->string('pharmacy');
+            $table->string('department');
             $table->text('medicationSafetyissues');
             $table->text('description');
             $table->timestamps();
