@@ -77,8 +77,11 @@
                                 <option value="Gastroenterology">Gastroenterology</option>
                                 <option value="General surgery">General surgery</option>
                                 <option value="Haematology">Haematology</option>
-                                <option value="Intensive care Units">Intensive care Units</option>
-                                <option value="Internal medicine">Internal medicine</option>
+                                <option value="Intensive Care Unit">Intensive Care Unit</option>
+                                <option value="Critical Care Unit">Critical Care Unit</option>
+                                <option value="Cardiac Care Unit">Cardiac Care Unit</option>
+                                <option value="Cardiac Care Unit">Cardiac Care Unit</option>
+                                <option value="Intermediate Care Unit">Intermediate Care Unit</option>
                                 <option value="Neurology">Neurology</option>
                                 <option value="Oncology">Oncology</option>
                                 <option value="Obstetrics and gynaecology">Obstetrics and gynaecology</option>
