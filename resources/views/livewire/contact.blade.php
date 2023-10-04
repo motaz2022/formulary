@@ -72,7 +72,8 @@
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-red-500 dark:focus:border-red-500">
                                 <option value="">Select</option>
                                 <option value="Anesthesiology">Anesthesiology</option>
-                                <option value="Cardiology">Cardiology</option>
+                                <option value="Emergency Department">Cardiology</option>
+                                <option value="Psychiatry">Emergency Department</option>
                                 <option value="Gastroenterology">Gastroenterology</option>
                                 <option value="General surgery">General surgery</option>
                                 <option value="Haematology">Haematology</option>
@@ -90,7 +91,8 @@
                                 <option value="Physiotherapy">Physiotherapy</option>
                                 <option value="Radiology">Radiology</option>
                                 <option value="Psychiatry">Psychiatry</option>
-                                <option value="Psychiatry">Urology</option>
+                                <option value="Urology">Urology</option>
+                                <option value="Other">Other</option>
 
                                 {{-- <option value="Acute Pharmacy">Acute Pharmacy</option>
                                 <option value="Chronic Pharmacy">Chronic Pharmacy</option>
